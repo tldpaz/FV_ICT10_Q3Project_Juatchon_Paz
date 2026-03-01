@@ -92,8 +92,9 @@
             border-style: solid;
             border-color: purple;
         }
+         /* im not adding the aesthetic stuff for this one its 3 am*/
     </style>
-
+    
 </head>
 
 <body>
@@ -109,18 +110,29 @@
   </div>
 </nav>
 
+<!-- Team Checker Form Section -->
 <div class="container">
 <div class="box">
     <h2>Team Checker</h2>
+
+    <!-- Registration question -->
     <h6>Did you register an account?</h6>
     <p>Yes</p><input type="radio" name="registration" value="yes">
     <p>No</p><input type="radio" name="registration" value="no">
+
+    <!-- Medical clearance question -->
     <h6>Are you medically able?</h6>
     <p>Yes</p><input type="radio" name="medical" value="yes">
     <p>No</p><input type="radio" name="medical" value="no">
+
+    <!-- Grade input -->
     <h6>What grade are you?</h6>
     <input id="grade" type="number" placeholder="Enter Grade">
+
+    <!-- Button to trigger team check -->
     <button id="checkBtn" class="btn btn-primary mt-3">Check Team</button>
+
+    <!-- Output will display here -->
     <h3 id="teamOutput" class="mt-3 text-center fw-bold"></h3>
 </div>
 </div>
@@ -128,4 +140,5 @@
 <py-script src="teamchecker.py"></py-script>
 
 </body>
+
 </html>
