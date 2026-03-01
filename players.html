@@ -89,15 +89,19 @@
   </div>
 </nav>
 
-<<div class="container">
+<!-- Container for players list -->
+<div class="container">
     <h2>Players List</h2>
     <h3>Here are your teammates!</h3>
+
+    <!-- List where player names will be inserted dynamically -->
     <ul id="playersList" class="list-group list-group-flush"></ul>
 </div>
 
 <py-script>
 from js import document
 
+# List of players
 players = [
     "1. Al Hazmi","2. Alvarez","3. Belsa","4. Bernas","5. Calaycay",
     "6. Castelo","7. Cruz","8. Defensor","9. Dimasuhid","10. Francisco",
@@ -107,8 +111,13 @@ players = [
     "26. Ramos, S.","27. Reodica","28. Repolona"
 ]
 
+# Get the unordered list element
 ul = document.getElementById("playersList")
+
+# Clear any existing content
 ul.innerHTML = ""
+
+# Loop through players list and create list items dynamically
 for p in players:
     li = document.createElement("li")
     li.className = "list-group-item"
@@ -116,4 +125,5 @@ for p in players:
     ul.appendChild(li)
 </py-script>
 </body>
+
 </html>
