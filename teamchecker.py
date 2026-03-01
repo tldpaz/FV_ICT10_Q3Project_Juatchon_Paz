@@ -38,6 +38,9 @@ def check_team(event):
         team = "Red Bulldogs"
     elif grade == 10:
         team = "Green Hornets"
+    else:
+        output.innerText = "You are not in the eligible grade range to be assigned a team."
 
     # Display final result
     output.innerText = f"Congratulations! You are part of the {team}!"
+
