@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Players</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://img.freepik.com/premium-photo/abstract-background-gradient-defocused-luxury-vivid-blurred-colorful-texture-wallpaper-photo_98870-2111.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 200%;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: rgb(248, 221, 255);
+            background-color: plum;
+            text-align: center;
+            font-family: forte;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+            border-style: solid;
+            border-color: purple;
+        }
+        h3 {
+            color: rgb(248, 221, 255);
+            background-color: plum;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+            border-style: solid;
+            border-color: purple;
+        }
+        .container {
+            max-width: 477px;
+            margin: auto;
+            background-color: white;
+            padding: 60px;
+            border-style: solid;
+            border-color: purple;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.699);
+        }
+        a {
+            color: rgb(248, 221, 255);
+            background-color: plum;
+            text-align: center;
+            font-family: forte;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+            border-style: solid;
+            border-color: purple;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: pink;
+            color: white;
+            border-style: solid;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.534);
+        }
+        button:hover {
+            background-color: plum;
+        }
+        #playersList li:nth-child(odd) { background-color: #ffe0f0; }
+        #playersList li:nth-child(even) { background-color: #d8b0ff; color: white; }
+        #playersList li:hover { background-color: gold; color: black; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Intramurals</a>
+    <div>
+      <a class="btn btn-danger me-2" href="signup.html">Sign Up</a>
+      <a class="btn btn-warning me-2" href="teamchecker.html">Team Checker</a>
+      <a class="btn btn-success" href="players.html">Players</a>
+    </div>
+  </div>
+</nav>
+
+<<div class="container">
+    <h2>Players List</h2>
+    <h3>Here are your teammates!</h3>
+    <ul id="playersList" class="list-group list-group-flush"></ul>
+</div>
+
+<py-script>
+from js import document
+
+players = [
+    "1. Al Hazmi","2. Alvarez","3. Belsa","4. Bernas","5. Calaycay",
+    "6. Castelo","7. Cruz","8. Defensor","9. Dimasuhid","10. Francisco",
+    "11. Hsu","12. Juatchon","13. Judge","14. Lilagan","15. Luna",
+    "16. Macaranas","17. Mateo","18. Mondragon","19. Naldoza","20. Natividad",
+    "21. Ng","22. Ong","23. Paz","24. Ramos, M.","25. Ramos, Q.",
+    "26. Ramos, S.","27. Reodica","28. Repolona"
+]
+
+ul = document.getElementById("playersList")
+ul.innerHTML = ""
+for p in players:
+    li = document.createElement("li")
+    li.className = "list-group-item"
+    li.innerText = p
+    ul.appendChild(li)
+</py-script>
+</body>
+</html>

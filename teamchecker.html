@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Checker</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <py-config>
+        files = ["teamchecker.py"]
+    </py-config>
+
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://img.freepik.com/premium-photo/abstract-background-gradient-defocused-luxury-vivid-blurred-colorful-texture-wallpaper-photo_98870-2111.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 200%;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: rgb(248, 221, 255);
+            background-color: plum;
+            text-align: center;
+            font-family: forte;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+            border-style: solid;
+            border-color: purple;
+        }
+        h3 {
+            color: rgb(248, 221, 255);
+            background-color: plum;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+            border-style: solid;
+            border-color: purple;
+        }
+        .container {
+            max-width: 477px;
+            margin: auto;
+            background-color: white;
+            padding: 60px;
+            border-style: solid;
+            border-color: purple;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.699);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid pink;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: pink;
+            color: white;
+            border-style: solid;
+            border-radius: 30%;
+            border: purple;
+            border-radius: 10px;
+            cursor: pointer;
+             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.534);
+        }
+        button:hover {
+            background-color: plum;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        } 
+        a {
+            color: rgb(248, 221, 255);
+            background-color: plum;
+            text-align: center;
+            font-family: forte;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+            border-style: solid;
+            border-color: purple;
+        }
+        h6 {
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26);
+            border-style: solid;
+            border-color: purple;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Intramurals</a>
+    <div>
+      <a class="btn btn-danger me-2" href="signup.html">Sign Up</a>
+      <a class="btn btn-warning me-2" href="teamchecker.html">Team Checker</a>
+      <a class="btn btn-success" href="players.html">Players</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<div class="box">
+    <h2>Team Checker</h2>
+    <h6>Did you register an account?</h6>
+    <p>Yes</p><input type="radio" name="registration" value="yes">
+    <p>No</p><input type="radio" name="registration" value="no">
+    <h6>Are you medically able?</h6>
+    <p>Yes</p><input type="radio" name="medical" value="yes">
+    <p>No</p><input type="radio" name="medical" value="no">
+    <h6>What grade are you?</h6>
+    <input id="grade" type="number" placeholder="Enter Grade">
+    <button id="checkBtn" class="btn btn-primary mt-3">Check Team</button>
+    <h3 id="teamOutput" class="mt-3 text-center fw-bold"></h3>
+</div>
+</div>
+
+<py-script src="teamchecker.py"></py-script>
+
+</body>
+</html>
