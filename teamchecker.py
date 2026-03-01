@@ -32,15 +32,19 @@ def check_team(event):
     # Assign team based on grade level
     if grade == 7:
         team = "Yellow Tigers"
+        output.innerText = f"Congratulations! You are part of the {team}!"
     elif grade == 8:
         team = "Blue Bears"
+        output.innerText = f"Congratulations! You are part of the {team}!"
     elif grade == 9:
         team = "Red Bulldogs"
+        output.innerText = f"Congratulations! You are part of the {team}!"
     elif grade == 10:
         team = "Green Hornets"
+        output.innerText = f"Congratulations! You are part of the {team}!"
     else:
         output.innerText = "You are not in the eligible grade range to be assigned a team."
 
-    # Display final result
-    output.innerText = f"Congratulations! You are part of the {team}!"
+    # Displays final result YAYY
+
 
